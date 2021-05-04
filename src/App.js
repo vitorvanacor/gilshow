@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { CssBaseline } from '@material-ui/core';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
-function App() {
+import Header from './Header';
+import Body from './Body';
+import Footer from './Footer';
+import YouVoted from './YouVoted';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: 'rgb(77, 77, 77)',
+    },
+    background: {
+      default: '#fff',
+    },
+  },
+});
+
+export default function App() {
+  const [hasVoted, setHasVoted] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Header />
+      {hasVoted ? (
+        <YouVoted back={() => setHasVoted(false)} />
+      ) : (
+        <Body vote={() => setHasVoted(true)} />
+      )}
+      <Footer />
+    </ThemeProvider>
   );
 }
-
-export default App;
