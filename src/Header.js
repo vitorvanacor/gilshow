@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import { Menu as MenuIcon, Search as SearchIcon } from '@material-ui/icons';
+import Drawer from './Drawer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -75,9 +76,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
   const classes = useStyles();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+    setIsDrawerOpen(open);
+  };
 
   return (
     <AppBar position="static">
+      <Drawer isOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
       <Toolbar className={classes.toolbar}>
         <div
           style={{
@@ -96,6 +108,7 @@ export default function Header() {
               color="inherit"
               aria-label="open drawer"
               startIcon={<MenuIcon />}
+              onClick={toggleDrawer(true)}
             >
               Menu
             </Button>
