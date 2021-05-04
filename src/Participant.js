@@ -48,7 +48,12 @@ export default function Participant({ name, expanded, onChange, vote }) {
   return (
     <Accordion square expanded={expanded} onChange={onChange}>
       <AccordionSummary>
-        <Typography variant="h6">{name}</Typography>
+        <Typography
+          variant="h3"
+          style={{ color: 'rgb(51, 51, 51)', fontSize: 24, fontWeight: 600 }}
+        >
+          {name}
+        </Typography>
         <ParticipantImage name={name} />
       </AccordionSummary>
       <AccordionDetails>

@@ -6,6 +6,8 @@ import Participant from './Participant';
 const useStyles = makeStyles((theme) => ({
   title: {
     textAlign: 'center',
+    fontSize: 56,
+    fontWeight: 700,
     margin: '40px',
   },
 }));

@@ -17,6 +17,9 @@ const theme = createMuiTheme({
       default: '#fff',
     },
   },
+  typography: {
+    fontFamily: '"Open Sans", helvetica, arial, sans-serif',
+  },
 });
 
 export default function App() {
