@@ -40,6 +40,7 @@ export default function Captcha({ vote }) {
     'Sou indestrutível',
     'Sou da cachorrada',
     'AI BRASIIIIL',
+    'Estou INDIGNADO!!',
   ];
 
   return (
