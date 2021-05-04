@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {},
   title: {
-    flexGrow: 1,
     fontSize: 32,
     display: 'none',
     [theme.breakpoints.up('sm')]: {
@@ -80,33 +79,46 @@ export default function Header() {
   return (
     <AppBar position="static">
       <Toolbar className={classes.toolbar}>
-        <Button
-          edge="start"
-          className={classes.menuButton}
-          color="inherit"
-          aria-label="open drawer"
-          startIcon={<MenuIcon />}
+        <div
+          style={{
+            margin: '0 auto',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            maxWidth: 1200,
+            width: '100%',
+          }}
         >
-          Menu
-        </Button>
-        <Typography variant="h5" noWrap>
-          gilshow
-        </Typography>
-        <Typography className={classes.title} variant="h1" noWrap>
-          BIG BROTHER BRASIL
-        </Typography>
-        <div className={classes.search}>
-          <div className={classes.searchIcon}>
-            <SearchIcon />
+          <div style={{ display: 'flex' }}>
+            <Button
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="open drawer"
+              startIcon={<MenuIcon />}
+            >
+              Menu
+            </Button>
+            <Typography variant="h5" noWrap style={{ marginLeft: 20 }}>
+              gilshow
+            </Typography>
           </div>
-          <InputBase
-            placeholder="BUSCAR"
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput,
-            }}
-            inputProps={{ 'aria-label': 'search' }}
-          />
+          <Typography className={classes.title} variant="h1" noWrap>
+            BIG BROTHER BRASIL
+          </Typography>
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="BUSCAR"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </div>
         </div>
       </Toolbar>
     </AppBar>
