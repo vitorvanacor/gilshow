@@ -28,7 +28,7 @@ export default function Body({ vote }) {
           name="Camilla de Lucas"
           expanded={expanded === 'camilla'}
           onChange={handleChange('camilla')}
-          vote={vote}
+          vote={() => setExpanded('gil')}
         />
         <Participant
           name="Gil do Vigor"
@@ -40,7 +40,7 @@ export default function Body({ vote }) {
           name="Juliette"
           expanded={expanded === 'juliette'}
           onChange={handleChange('juliette')}
-          vote={vote}
+          vote={() => setExpanded('gil')}
         />
       </Container>
     </div>
