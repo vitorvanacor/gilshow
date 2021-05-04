@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/gilshow/static/css/main.ea1455b2.chunk.css",
+    "main.js": "/gilshow/static/js/main.67403f01.chunk.js",
+    "main.js.map": "/gilshow/static/js/main.67403f01.chunk.js.map",
+    "runtime-main.js": "/gilshow/static/js/runtime-main.ee342f27.js",
+    "runtime-main.js.map": "/gilshow/static/js/runtime-main.ee342f27.js.map",
+    "static/js/2.2f4f1b5d.chunk.js": "/gilshow/static/js/2.2f4f1b5d.chunk.js",
+    "static/js/2.2f4f1b5d.chunk.js.map": "/gilshow/static/js/2.2f4f1b5d.chunk.js.map",
+    "static/js/3.078d8de0.chunk.js": "/gilshow/static/js/3.078d8de0.chunk.js",
+    "static/js/3.078d8de0.chunk.js.map": "/gilshow/static/js/3.078d8de0.chunk.js.map",
+    "index.html": "/gilshow/index.html",
+    "static/css/main.ea1455b2.chunk.css.map": "/gilshow/static/css/main.ea1455b2.chunk.css.map",
+    "static/js/2.2f4f1b5d.chunk.js.LICENSE.txt": "/gilshow/static/js/2.2f4f1b5d.chunk.js.LICENSE.txt",
+    "static/media/camilla.1624889e.jpg": "/gilshow/static/media/camilla.1624889e.jpg",
+    "static/media/gil1.2798f126.jpg": "/gilshow/static/media/gil1.2798f126.jpg",
+    "static/media/juliette.e90a4984.jpg": "/gilshow/static/media/juliette.e90a4984.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ee342f27.js",
+    "static/js/2.2f4f1b5d.chunk.js",
+    "static/css/main.ea1455b2.chunk.css",
+    "static/js/main.67403f01.chunk.js"
+  ]
+}
