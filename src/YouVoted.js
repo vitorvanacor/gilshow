@@ -53,7 +53,7 @@ export default function YouVoted({ back }) {
               </Typography>
             </div>
             <Typography className={classes.nameText}>Gil do Vigor</Typography>
-            <a href="https://twitter.com/gilnogueiraofc">
+            <a href="https://twitter.com/vitordevdd/status/1389479201015836672">
               <TwitterIcon className={classes.twitterIcon} />
             </a>
           </div>
